@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Data - never commit datasets
+data/*
+!data/README.md
+
+# Generated outputs
+reports/*.html
+reports/*.pdf
+models/
+
+# Env / IDE / OS
+.env
+.idea/
+.vscode/
+.DS_Store

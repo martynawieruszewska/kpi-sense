@@ -1,0 +1,41 @@
+[project]
+name = "kpi-sense"
+version = "0.1.0"
+description = "Intelligent KPI monitoring with anomaly detection and automated reporting"
+readme = "README.md"
+authors = [
+    { name = "Martyna Wieruszewska", email = "martyna.wieruszewska@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=2.5.4",
+    "pandas>=3.0.6",
+    "plotly>=7.1.0",
+    "scikit-learn>=1.9.1",
+    "streamlit>=1.65.0",
+]
+
+[project.scripts]
+kpi-sense = "kpi_sense:main"
+
+[build-system]
+requires = ["uv_build>=0.13.0,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.4.0",
+    "pre-commit>=4.6.2",
+    "pytest>=9.1.1",
+    "ruff>=0.17.0",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
